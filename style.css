@@ -49,22 +49,9 @@ nav {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 768px) {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: black;
-  }
-}
-
-
-
-
-
-/* @media only screen and (max-width: 1024px) {
-  .nav-links {
-    width: 60%;
+@media only screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
   }
 }
 
@@ -74,10 +61,15 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: black;
+    background-color: #5d4954;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 50%;
+    transform: translateX(100%);
   }
-} */
+
+  .nav-links li {
+    opacity: 0;
+  }
+}
