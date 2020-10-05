@@ -35,6 +35,7 @@ nav {
 
 .nav-links li {
   list-style: none;
+  cursor: pointer;
 }
 
 .burger {
@@ -67,9 +68,20 @@ nav {
     align-items: center;
     width: 50%;
     transform: translateX(100%);
+    transition: transform 0.5s ease-in;
   }
 
   .nav-links li {
     opacity: 0;
   }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+
 }
