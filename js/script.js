@@ -10,3 +10,5 @@ alert("1...");
 document.querySelector("h1").textContent = "🔥BOOM!🔥";
 
 // 4. Log "Message destroyed!" to the console
+
+console.log("Message destroyed!");
