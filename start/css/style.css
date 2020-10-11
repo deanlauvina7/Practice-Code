@@ -9,7 +9,7 @@ body {
 main {
   width: 90%;
   max-width: 1080px;
-  padding: 40px 0 0;
+  padding: 60px 0 0;
   margin: 0 auto;
 }
 
@@ -24,4 +24,11 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.5;
+}
+
+input[type="text"] {
+  width: 200px;
+  font-size: 1em;
+  border: none;
+  padding: 1em;
 }
