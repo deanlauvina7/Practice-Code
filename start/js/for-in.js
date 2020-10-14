@@ -6,3 +6,4 @@ const person = {
   isStudent: true,
   skills: ['JavaScript', 'HTML', 'CSS']
 };
+
