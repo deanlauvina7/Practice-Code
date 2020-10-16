@@ -1,15 +1,38 @@
-// Created a variable for what we want to change
-const myList = document.getElementsByTagName('li');
+const toggleList = document.querySelector('#toggleList');
+const listDiv = document.querySelector('.list');
+const descriptionInput = document.querySelector('input');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
+const addItemInput = document.querySelector('input.add-item-input');
+const addItemButton = document.querySelector('button.add-item-btn');
+const removeItemButton = document.querySelector('button.remove-item-btn');
 
-// We looped over all the element in our list and we want to change the color to purple
-for (let i = 0; i < myList.length; i++) {
-  myList[i].style.color = 'purple';
-}
+toggleList.addEventListener('click', () => {
+  if (listDiv.style.display === 'none') {
+    toggleList.textContent = 'hide list';
+    listDiv.style.display = 'block';
+  } else {
+    toggleList.textContent = 'show list';
+    listDiv.style.display = 'none';
+  }
+});
 
-// After the entire list has turned purple, we select all of the elements with a class name 'error-not-purple
-const errorNotPurple = document.getElementsByClassName('error-not-purple');
-// Then we loop through the entire list for elements with that class name and turn them red;
-for (let i = 0; i < errorNotPurple.length; i++) {
-  errorNotPurple[i].style.color = 'red';
+descriptionButton.addEventListener('click', () => {
+  descriptionP.innerHTML = descriptionInput.value + ':';
+  descriptionInput.value = '';
+});
 
-}
+addItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.createElement('li');
+  li.textContent = addItemInput.value;
+  ul.appendChild(li);
+  addItemInput.value = '';
+});
+
+removeItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.querySelector('li:last-child');
+  li.textContent = addItemInput.value;
+  ul.removeChild(li);
+});
