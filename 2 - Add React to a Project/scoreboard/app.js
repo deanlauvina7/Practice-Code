@@ -63,6 +63,7 @@ const App = (props) => {
         <Player
           name={player.name}
           score={player.score}
+          key={player.id.toString()}
         />
       )}
     </div>
