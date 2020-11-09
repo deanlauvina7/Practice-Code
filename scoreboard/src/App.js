@@ -1,13 +1,5 @@
 import React from 'react';
-
-const Header = (props) => {
-  return (
-    <header>
-      <h1>{props.title}</h1>
-      <span className="stats">Players: {props.totalPlayers}</span>
-    </header>
-  );
-};
+import Header from './components/Header';
 
 class Counter extends React.Component {
   state = {
@@ -97,7 +89,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="scoreboard">
-        <Header title="Scoreboard" totalPlayers={this.state.players.length} />
+        {/* <Header title="Scoreboard" totalPlayers={this.state.players.length} /> */}
 
         {/* Players list */}
         {this.state.players.map((player) => (
